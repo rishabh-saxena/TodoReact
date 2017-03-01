@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {Link} from 'react-router'
 export default class Filters extends Component {
   render () {
     return (
@@ -6,15 +7,9 @@ export default class Filters extends Component {
         <span className="todo-count">
         </span>
         <ul className="filters">
-          <li>
-            <a href="#/" className="selected">All</a>
-          </li>
-          <li>
-            <a href="#/active" className >Active</a>
-          </li>
-          <li>
-            <a href="#/completed">Completed</a>
-          </li>
+          <li> <Link to={'/'} activeClassName="active">all</Link></li>
+         <li> <Link to={'/active'} activeClassName="active">active</Link></li>
+         <li><Link to={'/completed'} activeClassName="active">completed</Link></li>
         </ul>
         <button className="clear-completed">Clear completed</button>
       </div>
